@@ -1,0 +1,76 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+   @override
+  Widget build(BuildContext context) {
+  return Column(children: <Widget>[
+      cabecalho(),
+      Expanded (child: conteudo()),
+      rodape()
+
+      ]);}
+
+
+
+  Widget cabecalho(){
+    return Container(
+        child:Center( 
+          child: Text("Lucas Rodrigues de Oliveira ", textDirection: TextDirection.ltr)
+        ),
+      
+        height: 100.0,
+        color: Colors.orange
+      );
+  }
+
+  Widget conteudo(){
+    return Row(children: 
+        <Widget>[
+          Container(
+            child: Center(
+              child: Image.network("https://media.discordapp.net/attachments/974036841542086677/974465770358726696/IMG_20220428_225112_790.webp?width=288&height=513")),
+            width: 190.0,
+            
+            color: Colors.black
+          ),
+          
+        
+          Expanded(child:Container(
+            child: Center(
+              child: Text("''Não acho que quem ganhar ou quem perder, nem quem ganhar nem perder, vai ganhar ou perder. Vai todo mundo perder.''", textDirection: TextDirection.ltr,
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 25.0
+              ))),
+          
+            color: Colors.black
+          ))
+    ], textDirection: TextDirection.ltr,);
+    
+  }
+  
+
+  Widget rodape(){
+    return Container(
+        child:Center( 
+          child: Text("Escola Etec Bento Quririno", textDirection: TextDirection.ltr)
+        ),
+      
+        height: 80.0,
+        color: Colors.orange
+      );
+  }
+
+
+     
+  
+  
+}
+  
+
